@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────
+#  Secrets — NIEMALS committen
+# ─────────────────────────────────────────────
+.env
+**/.env
+!.env.example
+*.pem
+*.key
+id_rsa*
+secrets.*
+credentials.*
+
+# ─────────────────────────────────────────────
+#  Goal-Pläne aus echten Läufen
+#  Die entstehen im NUTZER-Projekt unter goals/ — hier landen höchstens
+#  Testläufe, und die enthalten oft interne Repo-/Firmen-Details.
+# ─────────────────────────────────────────────
+goals/
+output/
+
+# ─────────────────────────────────────────────
+#  Medien & große Binaries
+# ─────────────────────────────────────────────
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.webm
+*.zip
+*.tar
+*.gz
+*.psd
+
+# ─────────────────────────────────────────────
+#  Generierte Outputs
+# ─────────────────────────────────────────────
+**/renders/
+**/frames/
+dist/
+build/
+*.log
+.cache/
+
+# ─────────────────────────────────────────────
+#  OS / Editor / Scratch
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+scratchpad/
