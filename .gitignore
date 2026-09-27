@@ -50,3 +50,6 @@ Thumbs.db
 .vscode/
 *.swp
 scratchpad/
+
+# Interne Arbeitsdatei der Asset-Pipeline (Notion-IDs, Karten, offene Schritte), nicht öffentlich
+.asset-pipeline.json
