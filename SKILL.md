@@ -58,7 +58,7 @@ goals/YYYY-MM-DD-<slug>.md    (im Projekt-Root; Ordner anlegen falls nötig)
 
 Dann übergeben: Zeig dem User den Plan-Pfad, die Definition of Done und das Startkommando aus der Sektion „Lauf-Setup". **Starte den Lauf niemals selbst** — der Plan ist die Vorbereitung, der Mensch zündet. Das gilt auch, wenn der User es eilig hat: „Plan liegt hier, so startest du ihn" ist das Ende dieses Skills.
 
-## Qualitäts-Rubric (alle 6 müssen bestehen)
+## Qualitäts-Rubric (alle 7 müssen bestehen)
 
 | # | Check | Warum |
 |---|---|---|
@@ -68,11 +68,13 @@ Dann übergeben: Zeig dem User den Plan-Pfad, die Definition of Done und das Sta
 | 4 | Budget gesetzt + Abbruchregel definiert (was passiert bei Budget-Ende ohne DoD) | Loops sind Token-Burner; ohne Deckel brennt es durch |
 | 5 | Eskalationsregel vorhanden (wann stoppen und fragen: destruktive Ops, alles Außenwirksame) | Autonomie endet, wo Schaden irreversibel wird |
 | 6 | Scope hat eine explizite Out-Liste (inkl. HITL-Anteile bei Gelb) | Was nicht ausgeschlossen ist, macht ein Agent irgendwann |
+| 7 | **Prüfer-Trennung:** Bei jedem Acceptance Criterion, das kein Kommando entscheiden kann (Textqualität, Design, „ist das gut genug"), steht im Plan, dass ein **frischer Subagent** urteilt — einer, der nur das Kriterium und das Ergebnis sieht, nicht den Weg dorthin | Ein Agent, der seine eigene Arbeit benotet, nickt sie ab: er kennt seine Absicht und liest sie ins Ergebnis hinein. Ein Prüfer ohne Vorgeschichte sieht nur, was wirklich dasteht |
 
 Fällt ein Check durch → Plan nachbessern, nicht durchwinken. Die häufigste Schwäche ist eine DoD, die in Wahrheit ein Wunsch ist („Code ist sauber") — dann zurück zu Schritt 3 und den User nach dem messbaren Kern fragen.
 
 ## Verhalten
 
+- **Selbstprüfung zählt nicht als Verification.** Wo kein Kommando entscheidet, gehört ein frischer Prüfer-Subagent in den Plan — mit Kriterium und Ergebnis im Prompt, ohne die Vorgeschichte. Ein Loop ist nur so gut wie seine Done-Prüfung; prüft er sich selbst, produziert er selbstbewussten, polierten Murks und meldet Erfolg.
 - **Challenge statt Gefälligkeit:** Wirkt das Ziel loop-ungeeignet, sag es begründet — ein verhinderter 5-Stunden-Fehllauf ist mehr wert als ein höflicher Plan.
 - **Constraints erben:** Eiserne Regeln des Projekts (z. B. „nie automatisch posten", „nie Daten löschen", „Test-Versand nur an interne Adresse") wandern wörtlich in die Constraints-Sektion. Der Goal-Plan darf nie lockerer sein als das Projekt.
 - **Wiederkehrende Aufgaben erkennen:** „Jede Nacht soll…" ist kein One-Shot-Goal, sondern eine Routine. Der Plan beschreibt dann den EINEN Lauf (idempotent, damit er jede Nacht neu starten kann) und das Lauf-Setup nennt den Scheduler (Cron/launchd) als Harness.
